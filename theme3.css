@@ -1,0 +1,25 @@
+:root {
+   /* THEME 3 */
+    /* Backgrounds */
+
+    --Verydarkvioletmainbackground: hsl(268, 75%, 9%);
+    --Verydarkviolet: hsl(268, 71%, 12%);
+    
+    /* #### Keys */
+    
+    --Darkviolet: hsl(281, 89%, 26%);
+    --Vividmagenta: hsl(285, 91%, 52%);
+    
+    --Purecyankeybgtoggle: hsl(176, 100%, 44%);
+    --Softcyankeyshadow: hsl(177, 92%, 70%);
+    
+    --Verydarkvioletkeybg: hsl(268, 47%, 21%);
+    --Darkmagentakeyshadow: hsl(290, 70%, 36%);
+    
+    /* #### Text */
+    
+    --Lightyellow: hsl(52, 100%, 62%);
+    --Verydarkblue: hsl(198, 20%, 13%);
+    --Whitetext: hsl(0, 0%, 100%);
+
+}
