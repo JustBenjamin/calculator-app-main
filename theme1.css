@@ -29,6 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'League Spartan', sans-serif;
 }
 
 
@@ -50,11 +51,24 @@ header {
   display: flex;
 }
 
+.themes > p {
+  margin-right: 20px ;
+}
+
 .toggle {
   width: 70px;
 }
 
+
+.toggle-numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .pill {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--ToggleKeypadBg);
   border-radius: 5px;
   width: 100%;
@@ -64,7 +78,17 @@ header {
   background-color: var(--ToggleKeypadBg);
   width: 100%;
   border-radius: 10px;
-  
+
+}
+
+.display > input {
+  background-color: var(--ToggleKeypadBg);
+  width: 90%;
+  height: 90%s;
+  border-radius: 10px;
+  border: none;
+  font-size: 32px;
+  color: var(--White);
 }
 
 .pad {
@@ -79,29 +103,36 @@ header {
 .keys {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 10px;
+  gap: 15px;
 
 }
 
 
 .action {
-  margin-top: 5px;
+  margin-top: 15px;
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 15px;
 }
 
 button {
- 
   border-radius: 10px;
   border: none;
   border-bottom: 5px solid var(--grayishOrangeKeyShadow);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--Verydarkgrayishblue);
+  cursor: pointer;
 }
 
 .delReset {
   background-color: var(--desaturatedDarkBlueKeyBackground);
+  color: var(--White);
+  font-size: smaller;
 }
 
 .equalSign {
   background-color: var(--redKeyBackgroundToggle);
+  color: var(--White);
+
 }

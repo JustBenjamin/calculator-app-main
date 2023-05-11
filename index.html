@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="author" content="Benjamin Hove">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="theme1.css">
   <link rel="stylesheet" href="theme2.css">
@@ -19,43 +21,48 @@
     <header>
       <h1>calc</h1>
       <div class="themes" >
-        <h2>THEME</h2>
+        <p>THEME</p>
         <div class="toggle">
-          <div>123</div>
+          <div class="toggle-numbers">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
           <div class="pill">
-            <input class="toggle" type="radio" name="toggle" id="one"/>
-            <input class="toggle" type="radio" name="toggle" id="two"/>
-            <input class="toggle" type="radio" name="toggle" id="three"/>
+            <input class="toggle-btn" type="radio" name="toggle" id="one"/>
+            <input class="toggle-btn" type="radio" name="toggle" id="two"/>
+            <input class="toggle-btn" type="radio" name="toggle" id="three"/>
           </div>
         </div>
       </div>
     </header>
 
     <div class="display">
+      <input type="text" id="result" readonly>
     </div>
 
     <div class="pad">
       <div class="keys">
-        <button onclick="">7</button>
-        <button onclick="">8</button>
-        <button onclick="">9</button>
-        <button onclick="" class="delReset">DEL</button>
-        <button onclick="">4</button>
-        <button onclick="">5</button>
-        <button onclick="">6</button>
-        <button onclick="">+</button>
-        <button onclick="">1</button>
-        <button onclick="">2</button>
-        <button onclick="">3</button>
-        <button onclick="">-</button>
-        <button onclick="">.</button>
-        <button onclick="">0</button>
-        <button onclick="">/</button>
+        <button onclick="getResult('7')">7</button>
+        <button onclick="getResult('8')">8</button>
+        <button onclick="getResult('9')">9</button>
+        <button onclick="backspace()" class="delReset">DEL</button>
+        <button onclick="getResult('4')">4</button>
+        <button onclick="getResult('5')">5</button>
+        <button onclick="getResult('6')">6</button>
+        <button onclick="getResult('+')">+</button>
+        <button onclick="getResult('1')">1</button>
+        <button onclick="getResult('2')">2</button>
+        <button onclick="getResult('3')">3</button>
+        <button onclick="getResult('-')">-</button>
+        <button onclick="getResult('.')">.</button>
+        <button onclick="getResult('0')">0</button>
+        <button onclick="getResult('%')">/</button>
         <button onclick="">x</button>
       </div>
       <div class="action">
-        <button onclick="" class="delReset">RESET</button>
-        <button onclick="" class="equalSign">=</button>
+        <button onclick="clearResult()" class="delReset">RESET</button>
+        <button onclick="calculateResult()" class="equalSign">=</button>
       </div>
     </div>
   </main>
