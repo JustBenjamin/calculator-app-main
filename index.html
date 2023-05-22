@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="theme1.css">
+  <link rel="stylesheet" href="theme1.css" id="theme1">
   <link rel="stylesheet" href="theme2.css">
   <link rel="stylesheet" href="theme3.css">
   
@@ -29,17 +29,18 @@
             <span>3</span>
           </div>
           <div class="pill">
-            <input class="toggle-btn" type="radio" name="toggle" id="one"/>
-            <input class="toggle-btn" type="radio" name="toggle" id="two"/>
-            <input class="toggle-btn" type="radio" name="toggle" id="three"/>
+            <input class="toggle-btn" type="radio" name="toggle" id="one" onclick="themeSwitch(1)"/>
+            <input class="toggle-btn" type="radio" name="toggle" id="two" onclick="themeSwitch(2)"/>
+            <input class="toggle-btn" type="radio" name="toggle" id="three" onclick="themeSwitch(3)"/>
           </div>
         </div>
       </div>
     </header>
 
-    <div class="display">
-      <input type="text" id="result" readonly>
-    </div>
+      <!-- <input type="text" id="result" readonly> -->
+    <input class="display" id="result" type="text" readonly/>
+    
+    
 
     <div class="pad">
       <div class="keys">
@@ -57,8 +58,8 @@
         <button onclick="getResult('-')">-</button>
         <button onclick="getResult('.')">.</button>
         <button onclick="getResult('0')">0</button>
-        <button onclick="getResult('%')">/</button>
-        <button onclick="">x</button>
+        <button onclick="getResult('/')">/</button>
+        <button onclick="getResult('*')">x</button>
       </div>
       <div class="action">
         <button onclick="clearResult()" class="delReset">RESET</button>

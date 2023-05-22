@@ -22,6 +22,10 @@
 
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
     background-color: var(--VeryDarkDesaturatedBlue);
     color: var(--White);
@@ -30,6 +34,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'League Spartan', sans-serif;
+    
 }
 
 
@@ -41,10 +46,17 @@ main {
   gap: 1.5rem;
 }
 
+
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 12px 0px;
+}
+
+header > h1 {
+  margin-top: 4px;
 }
 
 .themes {
@@ -59,43 +71,75 @@ header {
   width: 70px;
 }
 
+input[type="radio"] {
+  height: 15px;
+  width: 30px;
+  appearance: none;
+  border-radius: 50%;
+  background-color: var(--redKeyBackgroundToggle);
+  opacity: 0;
+
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+
+
+#one {
+  opacity: 1;
+}
+#two {
+  background-color: hsl(25, 98%, 40%);
+}
+
+#three {
+  background-color: hsl(176, 100%, 44%);
+}
+
 
 .toggle-numbers {
   display: flex;
   justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 5px;
 }
+
 
 
 .pill {
   display: flex;
   justify-content: space-between;
   background-color: var(--ToggleKeypadBg);
-  border-radius: 5px;
+  border-radius: 25px;
   width: 100%;
+  padding: 5px;
 }
 
 .display {
   background-color: var(--ToggleKeypadBg);
   width: 100%;
+  height: auto;
   border-radius: 10px;
-
-}
-
-.display > input {
-  background-color: var(--ToggleKeypadBg);
-  width: 90%;
-  height: 90%s;
-  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+  outline: none;
   border: none;
   font-size: 32px;
-  color: var(--White);
+  text-align: right;
+  font-weight: 700;
+
 }
+
+
 
 .pad {
   display: grid;
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 80% 16%;
+  gap: 20px;
   background-color: var(--ToggleKeypadBg);
-  padding: 20px;
+  padding: 20px 20px 35px 20px;
   border-radius: 10px;
 
 }
@@ -104,12 +148,12 @@ header {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 15px;
+  cursor: pointer;
 
 }
 
 
 .action {
-  margin-top: 15px;
   display: grid;
   grid-template-columns: auto auto;
   gap: 15px;
@@ -127,12 +171,23 @@ button {
 
 .delReset {
   background-color: var(--desaturatedDarkBlueKeyBackground);
+  border-bottom-color: var(--desaturatedDarkBluekeyShadow);
   color: var(--White);
   font-size: smaller;
 }
 
 .equalSign {
   background-color: var(--redKeyBackgroundToggle);
+  border-bottom-color: var(--darkRedGreyKeyShadow);
   color: var(--White);
 
+}
+
+@media screen and (min-width: 480px)  {
+  main {
+    width:20vw;
+    height: auto;
+  }
+
+  
 }
