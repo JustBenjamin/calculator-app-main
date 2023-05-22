@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/JustBenjamin/tip-calculator-app-main
+- Solution URL: https://github.com/JustBenjamin/calculator-app-main
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 
